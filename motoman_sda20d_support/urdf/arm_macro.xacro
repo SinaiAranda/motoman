@@ -1,0 +1,445 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<xacro:macro name="motoman_arm" params="prefix parent reflect">
+
+	<!-- link list -->
+  <link
+    name="${prefix}link_1_s">
+    <inertial>
+      <origin
+        xyz="5.2918E-06 0.021755 0.16826"
+        rpy="0 0 0" />
+      <mass
+        value="10.704" />
+      <inertia
+        ixx="0.17312"
+        ixy="-1.4296E-06"
+        ixz="-8.891E-06"
+        iyy="0.17545"
+        iyz="-0.026584"
+        izz="0.059382" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/visual/link_1_s.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/collision/link_1_s.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="${prefix}link_2_l">
+    <inertial>
+      <origin
+        xyz="0.069111 1.8074E-05 -0.039943"
+        rpy="0 0 0" />
+      <mass
+        value="8.031" />
+      <inertia
+        ixx="0.03886"
+        ixy="-1.2216E-05"
+        ixz="-0.017517"
+        iyy="0.094695"
+        iyz="-5.0745E-06"
+        izz="0.10194" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/visual/link_2_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/collision/link_2_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="${prefix}link_3_e">
+    <inertial>
+      <origin
+        xyz="2.3339E-06 -0.02415 0.13581"
+        rpy="0 0 0" />
+      <mass
+        value="6.0023" />
+      <inertia
+        ixx="0.063894"
+        ixy="-1.5274E-07"
+        ixz="-3.0691E-08"
+        iyy="0.062384"
+        iyz="0.010637"
+        izz="0.023266" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/visual/link_3_e.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/collision/link_3_e.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="${prefix}link_4_u">
+    <inertial>
+      <origin
+        xyz="0.076105 1.3438E-05 0.033833"
+        rpy="0 0 0" />
+      <mass
+        value="4.2991" />
+      <inertia
+        ixx="0.01178"
+        ixy="-1.1821E-05"
+        ixz="0.0056112"
+        iyy="0.042152"
+        iyz="3.1996E-06"
+        izz="0.043983" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/visual/link_4_u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/collision/link_4_u.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="${prefix}link_5_r">
+    <inertial>
+      <origin
+        xyz="3.197E-06 0.024231 0.10713"
+        rpy="0 0 0" />
+      <mass
+        value="2.1798" />
+      <inertia
+        ixx="0.012925"
+        ixy="6.8017E-09"
+        ixz="3.8025E-07"
+        iyy="0.012754"
+        iyz="-0.0021611"
+        izz="0.0041053" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/visual/link_5_r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/collision/link_5_r.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="${prefix}link_6_b">
+    <inertial>
+      <origin
+        xyz="0.063005 5.2352E-05 -0.0172"
+        rpy="0 0 0" />
+      <mass
+        value="2.2078" />
+      <inertia
+        ixx="0.0045051"
+        ixy="9.1066E-07"
+        ixz="-0.0019934"
+        iyy="0.010714"
+        iyz="-6.1671E-07"
+        izz="0.010934" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/visual/link_6_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/collision/link_6_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+      <link 
+        name="${prefix}link_7_t">
+    <inertial>
+      <origin
+        xyz="-2.1465E-05 5.2992E-08 0.0078271"
+        rpy="0 0 0" />
+      <mass
+        value="0.10719" />
+      <inertia
+        ixx="6.5327E-05"
+        ixy="6.1499E-07"
+        ixz="1.834E-08"
+        iyy="6.5152E-05"
+        iyz="-1.7925E-11"
+        izz="0.0001262" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/visual/link_7_t.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://motoman_sda20d_support/meshes/collision/link_7_t.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="${prefix}link_tool0" />
+
+	<!-- joint list -->
+  <joint
+    name="${prefix}joint_1_s"
+    type="revolute">
+    <origin
+      xyz="0.15 ${reflect*0.075} 0.2984"
+      rpy="${(reflect)*1.5708} ${(reflect)*1.5708-1.5708} 3.1416" />
+    <parent
+      link="${parent}" />
+    <child
+      link="${prefix}link_1_s" />
+    <axis
+      xyz="0 0 ${reflect}" />
+    <limit
+      effort="0"
+      lower="-3.13"
+      upper="3.13"
+      velocity="0.151267548" />
+    <!-- velocity="0.9076052904129028" -->
+  </joint>
+
+  <joint
+    name="${prefix}joint_2_l"
+    type="revolute">
+    <origin
+      xyz="0 0 0.31"
+      rpy="-1.5708 -1.5708 0" />
+    <parent
+      link="${prefix}link_1_s" />
+    <child
+      link="${prefix}link_2_l" />
+    <axis
+      xyz="0 0 ${-reflect}" />
+    <limit
+      effort="0"
+      lower="-1.90"
+      upper="1.90"
+      velocity="0.132802963" />
+    <!-- velocity="0.7968177795410156" -->
+  </joint>
+
+  <joint
+    name="${prefix}joint_3_e"
+    type="revolute">
+    <origin
+      xyz="0.245 0 0"
+      rpy="1.5708 -5.0715E-16 1.5708" />
+    <parent
+      link="${prefix}link_2_l" />
+    <child
+      link="${prefix}link_3_e" />
+    <axis
+      xyz="0 0 ${reflect}" />
+    <limit
+      effort="0"
+      lower="-2.95"
+      upper="2.95"
+      velocity="0.173283021" />
+    <!-- velocity="1.0396981239318848" -->
+  </joint>
+
+  <joint
+    name="${prefix}joint_4_u"
+    type="revolute">
+    <origin
+      xyz="0 0 0.245"
+      rpy="-1.5708 -1.5708 0" />
+    <parent
+      link="${prefix}link_3_e" />
+    <child
+      link="${prefix}link_4_u" />
+    <axis
+      xyz="0 0 ${reflect}" />
+    <limit
+      effort="0"
+      lower="-2.25"
+      upper="2.25"
+      velocity="0.198139191" />
+    <!-- velocity="1.1888351440429688" -->
+  </joint>
+
+  <joint
+    name="${prefix}joint_5_r"
+    type="revolute">
+    <origin
+      xyz="0.241 0 0"
+      rpy="1.5708 -1.464E-17 1.5708" />
+    <parent
+      link="${prefix}link_4_u" />
+    <child
+      link="${prefix}link_5_r" />
+    <axis
+      xyz="0 0 ${-reflect}" />
+    <limit
+      effort="0"
+      lower="-3.13"
+      upper="3.13"
+      velocity="0.261991759" />
+    <!-- velocity="1.5719505548477173" -->
+  </joint>
+
+  <joint
+    name="${prefix}joint_6_b"
+    type="revolute">
+    <origin
+      xyz="0 0 0.179"
+      rpy="1.8852 -1.5708 2.8272" />
+    <parent
+      link="${prefix}link_5_r" />
+    <child
+      link="${prefix}link_6_b" />
+    <axis
+      xyz="0 0 ${reflect}" />
+    <limit
+      effort="0"
+      lower="-1.90"
+      upper="1.90"
+      velocity="0.29046913" />
+    <!-- velocity="1.7428147792816162" -->
+  </joint>
+
+  <joint
+    name="${prefix}joint_7_t"
+    type="revolute">
+    <origin
+      xyz="0.1642 0 0"
+      rpy="1.5708 -1.0214E-15 1.5708" />
+    <parent
+      link="${prefix}link_6_b" />
+    <child
+      link="${prefix}link_7_t" />
+    <axis
+      xyz="0 0 ${-reflect}" />
+    <limit
+      effort="0"
+      lower="-3.12"
+      upper="3.12"
+      velocity="0.340884606" />
+    <!-- velocity="2.0453076362609863" -->
+  </joint>
+
+  <joint name="${prefix}joint_tool0" type="fixed" >
+    <origin 
+      xyz="0 0 0.016" rpy="0 0 0"/>
+    <parent
+      link="${prefix}link_7_t" />
+    <child link="${prefix}link_tool0" />
+  </joint>
+	<!-- end of joint list -->
+
+</xacro:macro>
+</robot>

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+
+<robot name="motoman_sda20d" xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:include filename="$(find motoman_sda20d_support)/urdf/sda20d_macro.xacro" />
+</robot>
+
