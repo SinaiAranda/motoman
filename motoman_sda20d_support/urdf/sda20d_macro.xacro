@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+     <xacro:include filename="$(find motoman_sda20d_support)/urdf/common_torso_macro.xacro" />
+<xacro:include filename="$(find motoman_sda20d_support)/urdf/arm_macro.xacro" />
+
+<xacro:torso prefix="torso_"/>
+        <xacro:motoman_arm prefix="arm_left_" parent="torso_link_b1" reflect="1"/>
+        <xacro:motoman_arm prefix="arm_right_" parent="torso_link_b1" reflect="-1"/>
+
+<!-- The following xacro is kept for backwards compatibility, it should not be used -->
+<!-- see: https://github.com/ros-industrial/motoman/issues/166 -->
+
+</robot>

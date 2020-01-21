@@ -1,0 +1,21 @@
+<launch>
+
+<node name="running" pkg="motoman_robot_monitoring" type="running" />
+
+<node name="servo_is_on" pkg="motoman_robot_monitoring" type="servo_is_on" />
+
+<node name="top_of_master_job" pkg="motoman_robot_monitoring" type="top_of_master_job" />
+
+<node name="alarm_error_occurred" pkg="motoman_robot_monitoring" type="alarm_error_occurred" />
+
+<node name="battery_alarm" pkg="motoman_robot_monitoring" type="battery_alarm" />
+
+<node name="remote_mode_selected" pkg="motoman_robot_monitoring" type="remote_mode_selected" />
+
+<node name="play_mode_selected" pkg="motoman_robot_monitoring" type="play_mode_selected" />
+
+<node name="teach_mode_selected" pkg="motoman_robot_monitoring" type="teach_mode_selected" />
+
+<node name="motoman_robot_monitoring" pkg="motoman_robot_monitoring" type="motoman_robot_monitoring.py" />
+
+</launch>
