@@ -1,0 +1,24 @@
+<launch>
+  <include file="$(find motoman_sda20d_with_grippers_moveit_config)/launch/moveit_planning_execution.launch">
+    <arg name="robot_ip"   value="192.168.255.10" />
+    <arg name="sim"   value="false" />
+	</include>
+  <arg name="scene_file" default="$(find motoman_sda20d_with_grippers_moveit_config)/scenes/first_scene.scene"/> 
+  <node name = "moveit_publish_scene_from_text" pkg= "moveit_ros_planning" type = "moveit_publish_scene_from_text" args= "$(arg scene_file)"/>
+
+  <node name="left_robotiq_gripper_3_finger_adaptive_state" pkg="robotiq_gripper_3_finger_adaptive_control" type="left_robotiq_gripper_3_finger_adaptive_state" />
+
+
+<!--
+  <node name="right_robotiq_gripper_3_finger_adaptive_state" pkg="robotiq_gripper_3_finger_adaptive_control" type="right_robotiq_gripper_3_finger_adaptive_state" />
+
+  <node name="init_grippers" pkg="robotiq_gripper_3_finger_adaptive_control" type="init_grippers" />
+
+  <include file="$(find openni_launch)/launch/openni.launch">
+    <arg name="rgb_camera_info_url"   value="package://cidesi_apps/camera_info/rgb/ost.yaml" />
+    <arg name="depth_camera_info_url"   value="package://cidesi_apps/camera_info/ir/ost.yaml" />
+	</include>
+  <node name = "static_transform_publisher" pkg= "tf" type = "static_transform_publisher" args= "4.27 0.2 0.1 -0.04 3.1 3.13 /camera_link /point_could_frame_id 10"/>
+
+ -->
+</launch>

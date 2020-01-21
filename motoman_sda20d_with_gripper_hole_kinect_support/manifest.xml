@@ -1,0 +1,6 @@
+<package>
+  <description brief="motoman_sda20d_with_gripper_hole_kinect"></description>
+  <depend package="gazebo" />
+  <author>Sinai Aranda Miramontes</author>
+  <license>BSD</license>
+</package>

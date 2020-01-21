@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<robot name="hole" xmlns:xacro="http://ros.org/wiki/xacro">
+  <material name="plate">
+    <color rgba="0.8 0.8 1"/>
+  </material>
+  <link name="hole_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.082" radius="0.047"/>
+      </geometry>
+      <material name="plate"/>
+    </visual>
+  </link>
+</robot>

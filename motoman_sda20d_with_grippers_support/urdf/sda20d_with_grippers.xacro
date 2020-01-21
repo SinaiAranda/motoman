@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="motoman_sda20d_with_grippers_support">
+	<xacro:include filename="$(find motoman_sda20d_support)/urdf/sda20d.xacro" />
+	<xacro:include filename="$(find robotiq_gripper_3_finger_adaptive_support)/urdf/gripper_macro.xacro" />
+	<xacro:gripper prefix="left_"/>
+	<joint name="arm_left_to_gripper" type="fixed">
+		<origin xyz="0 0 0.0" rpy="0 0 ${pi/2}" />
+		<parent link="arm_left_link_tool0" />
+		<child link="left_gripper_base_link" />
+	</joint>
+	<xacro:gripper prefix="right_"/>
+	<joint name="arm_right_to_gripper" type="fixed">
+		<origin xyz="0 0 0.0" rpy="0 0 ${pi/2}" />
+		<parent link="arm_right_link_tool0" />
+		<child link="right_gripper_base_link" />
+	</joint>
+	<link name="left_link_tool1" />
+	<link name="right_link_tool1" />
+	<joint name="left_joint_tool1" type="fixed" >
+	  <origin 
+	    xyz="0 0 0.16" rpy="0 0 0"/>
+	  <parent
+	    link="left_gripper_base_link" />
+	  <child link="left_link_tool1" />
+	</joint>
+	<joint name="right_joint_tool1" type="fixed" >
+	  <origin 
+	    xyz="0 0 0.16" rpy="0 0 0"/>
+	  <parent
+	    link="right_gripper_base_link" />
+	  <child link="right_link_tool1" />
+	</joint>
+</robot>
