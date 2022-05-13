@@ -1,0 +1,5 @@
+<launch>
+  <!-- Params for 3D sensors config -->
+  <rosparam command="load" file="$(find motoman_sda20d_with_peg_hole_kinect_moveit_config)/config/sensors_3d.yaml" />
+
+</launch>

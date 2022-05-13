@@ -1,0 +1,19 @@
+<launch>
+  <include file="$(find motoman_sda20d_with_peg_hole_kinect_moveit_config)/launch/moveit_planning_execution.launch">
+    <arg name="robot_ip"   value="192.168.255.10" />
+    <arg name="sim"   value="false" />
+	</include>
+
+  <node pkg="tf" type="static_transform_publisher" name="transform" args="0.15 -0.0 0.65 -1.6 -0.0 -2.13 /torso_link_b1 /kinect2_ir_optical_frame 10" />
+
+  <node pkg="my_pcl_tutorial" type="voxel_grid_filter" name="voxel_grid_filter" />
+
+<!--
+  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+    <param name="resolution"   value="0.3" />
+    <param name="frame_id" type="string" value="/kinect2_link" />
+    <remap from="could_in"   to="/kinect2/sd/voxel_grid_points" />
+  </node>
+ -->
+ 
+</launch><!-- This was missing -->
