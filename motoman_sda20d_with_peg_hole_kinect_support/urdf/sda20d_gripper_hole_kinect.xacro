@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="sda20d_gripper_hole_kinect">
+	<xacro:include filename="$(find motoman_sda20d_support)/urdf/sda20d.xacro" />
+        <xacro:include filename="$(find motoman_sda20d_with_peg_hole_kinect_support)/urdf/peg.xacro" />
+        <joint name="peg_joint" type="fixed">
+          <origin xyz="0 0 0.04" rpy="3.1416 0 0"/>
+          <parent link="arm_left_link_tool0"/>
+          <child link="peg_link"/>
+        </joint>
+        <link name="arm_left_link_tool1"/>
+        <joint name="arm_left_joint_tool1" type="fixed">
+          <origin xyz="0 0 0.04" rpy="3.1416 0 0"/>
+          <parent link="peg_link"/>
+          <child link="arm_left_link_tool1"/>
+        </joint>
+        <xacro:include filename="$(find motoman_sda20d_with_gripper_hole_kinect_support)/urdf/hole.xacro" />
+        <joint name="hole_joint" type="fixed">
+          <origin xyz="0 0 0.04" rpy="3.1416 0 0"/>
+          <parent link="arm_right_link_tool0"/>
+          <child link="hole_link"/>
+        </joint>
+        <xacro:include filename="$(find motoman_sda20d_with_gripper_hole_kinect_support)/urdf/kinect.xacro" />
+        <joint name="kinect_joint" type="fixed">
+          <origin xyz="0.12 0 0.54" rpy="0 0 0"/>
+          <parent link="torso_link_b1"/>
+          <child link="kinect_link"/>
+        </joint>
+</robot>
+<!-- /home/cidesi-nl/cidesi_ws/src/motoman/motoman_sda20d_with_gripper_hole_kinect_support/urdf/model.urdf -->

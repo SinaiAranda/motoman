@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<robot name="peg" xmlns:xacro="http://ros.org/wiki/xacro">
+  <material name="plate">
+    <color rgba="0.8 0.8 1"/>
+  </material>
+  <link name="peg_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.072" radius="0.047"/>
+      </geometry>
+      <material name="plate"/>
+    </visual>
+  </link>
+</robot>
